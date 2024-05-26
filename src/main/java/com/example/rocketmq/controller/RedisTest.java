@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,7 +22,8 @@ import java.util.concurrent.TimeUnit;
 public class RedisTest {
 
 
-    @Autowired
+    //@Autowired
+    @Resource
     private RedisTemplate<String, Object> redisTemplate;
 
 
