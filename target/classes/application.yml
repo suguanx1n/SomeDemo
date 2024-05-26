@@ -1,3 +1,5 @@
+server:
+  port: 8888
 spring:
   application:
     name: rocketmq
@@ -20,4 +22,21 @@ rocketmq:
       send-message-timeout: 3000 # ��Ϣ���ͳ�ʱʱ����Ĭ��3s
       retry-times-when-send-failed: 3 # ͬ��������Ϣʧ�����Դ�����Ĭ��2
       retry-times-when-send-async-failed: 3 # �첽������Ϣʧ�����Դ�����Ĭ��2
+
+xxl:
+  job:
+    admin:
+      # xxl-job后台管理界面的地址
+      addresses: http://127.0.0.1:8080/xxl-job-admin
+    accessToken: default_token
+    executor:
+      # 此执行器的名称
+      appname: xxl-job-executor-sample
+      # 此执行器的端口
+      port: 38801
+      # 此执行器的日志存放路径
+      logpath: logs/xxl-job/xxl-job-executor-sample
+      # 此执行器的日志保存时间
+      logretentiondays: 7
+
 
